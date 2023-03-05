@@ -15,7 +15,7 @@ jobs:
           mkdir -p ~/.ssh/
           echo "${{secrets.SSH_PRIVATE_KEY}}" > ~/.ssh/id_rsa
           sudo chmod 600 ~/.ssh/id_rsa
-      - name: git config
+      - name: git config user and mail
         run: |
          git config --global user.email "cd-user@my-app.com"
          git config --global user.name "cd-user"
